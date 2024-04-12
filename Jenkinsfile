@@ -1,12 +1,12 @@
 pipeline {
-    agent { label 'slave1' }
+    agent { label 'Jenkins_Slave' }
 
     stages {
         stage('SCM Checkout') {
             steps {
                 echo 'Perfomr SCM Check-Out'
 				echo 'Cloning Java Maven App Code'
-				git 'https://github.com/LoksaiETA/Java-mvn-app2.git'
+				git 'https://github.com/kavitahonnungar/Java-mvn-app2.git'
             }
         }
         stage('Java Application Build') {
